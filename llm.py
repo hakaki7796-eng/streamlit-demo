@@ -31,7 +31,7 @@ def get_retriever():
 
 
 def get_llm(model='solar-pro'):
-    llm = ChatUpstage(model=model)
+    llm = ChatUpstage(model_name=model)
     return llm
 
 
