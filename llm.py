@@ -31,7 +31,7 @@ def get_retriever():
 
 
 def get_llm(model='solar-pro'):
-    llm = ChatUpstage(model_name=model)
+    llm = ChatUpstage(model=model)
     return llm
 
 
@@ -52,7 +52,7 @@ def get_dictionary_chain():
     return dictionary_chain
 
 def get_history_retriever():
-    llm = get_llm
+    llm = get_llm()
     retriever = get_retriever()
 
     contextualize_q_system_prompt = (
