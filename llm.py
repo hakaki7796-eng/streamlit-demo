@@ -26,7 +26,8 @@ def get_retriever():
     index_name = 'tax-markdown-index'
     database = PineconeVectorStore.from_existing_index(index_name=index_name, embedding=embedding)
     retriever = database.as_retriever(search_kwargs={'k': 4})
-
+    print("Retriever created")
+    
     return retriever
 
 
